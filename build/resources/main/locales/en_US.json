@@ -1,0 +1,10 @@
+{
+	"label": "DateCalculations",
+	"description": "Provides actions for date calculations.",
+	"DateDiff.label":"Date Difference",
+	"DateDiff.description":"Enter Start Date and End Date to obtain difference in days",
+	"DateDiff.node_label":"datediff | {{startDate}} | {{endDate}}",
+	"DateDiff.return_label":"Assign the output to a variable",
+	"DateDiff.startDate":"Start Date",
+	"DateDiff.endDate":"End Date"
+}

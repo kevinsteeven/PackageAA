@@ -1,0 +1,484 @@
+{
+    "name": "DateCalculations",
+    "label": "[[label]]",
+    "description": "[[description]]",
+    "group": "com.automationanywhere",
+    "artifactName": "DateCalculations",
+    "packageVersion": "2.5.0-20220901-190709",
+    "codeVersion": "2.5.0-20220901-190709",
+    "author": "KevinGarces",
+    "commands": [
+        {
+            "name": "DateDiff",
+            "label": "[[DateDiff.label]]",
+            "description": "[[DateDiff.description]]",
+            "nodeLabel": "[[DateDiff.node_label]]",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.basic.DateDifferenceCommand",
+            "icon": "datediff.svg",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "[[DateDiff.return_label]]",
+            "returnRequired": true,
+            "attributes": [
+                {
+                    "name": "startDate",
+                    "label": "Start Date",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "endDate",
+                    "label": "End Date",
+                    "type": "DATETIME",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "uiDemo",
+            "label": "UI Demo",
+            "description": "Demonstrates the provided UI elements",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.commands.ui.SampleUICommand",
+            "returns": [
+                {
+                    "type": "UNDEFINED",
+                    "subtype": "ANY"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "text",
+                    "label": "Text type",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "num",
+                    "label": "Number type",
+                    "type": "NUMBER"
+                },
+                {
+                    "name": "bool",
+                    "label": "Boolean type",
+                    "description": "A check box also supports children.",
+                    "type": "BOOLEAN",
+                    "attributes": [
+                        {
+                            "name": "boolChild1",
+                            "label": "Text type",
+                            "description": "Child of boolean, this gets evaluated only when the checkbox is true",
+                            "type": "TEXT"
+                        }
+                    ]
+                },
+                {
+                    "name": "select",
+                    "label": "Select type",
+                    "type": "SELECT",
+                    "options": [
+                        {
+                            "label": "Select Option 1",
+                            "value": "Select option 1"
+                        }
+                    ]
+                },
+                {
+                    "name": "radio",
+                    "label": "Radio type",
+                    "type": "RADIO",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ],
+                    "options": [
+                        {
+                            "label": "Select Option 1",
+                            "value": "Radio option 1"
+                        },
+                        {
+                            "label": "Select Option 1",
+                            "value": "Radio option 2"
+                        }
+                    ]
+                },
+                {
+                    "name": "file",
+                    "label": "File type",
+                    "type": "FILE"
+                },
+                {
+                    "name": "variable",
+                    "label": "Variable type",
+                    "description": "Variable accepting only Boolean types",
+                    "type": "VARIABLE",
+                    "rules": [
+                        {
+                            "name": "VARIABLE_TYPE",
+                            "value": "BOOLEAN"
+                        }
+                    ]
+                },
+                {
+                    "name": "textarea",
+                    "label": "TextArea type",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "code",
+                    "label": "Code type",
+                    "description": "Accepting javascript",
+                    "type": "CODE",
+                    "rules": [
+                        {
+                            "name": "CODE_TYPE",
+                            "value": "text/javascript"
+                        }
+                    ]
+                },
+                {
+                    "name": "dictionaryType",
+                    "label": "Dictionary type",
+                    "type": "DICTIONARY"
+                },
+                {
+                    "name": "listType",
+                    "label": "List type",
+                    "type": "LIST"
+                },
+                {
+                    "name": "boolType",
+                    "label": "Boolean type",
+                    "type": "BOOLEAN"
+                },
+                {
+                    "name": "taskBot",
+                    "label": "TaskBot type",
+                    "type": "TASKBOT"
+                },
+                {
+                    "name": "window",
+                    "label": "Window type",
+                    "type": "WINDOW"
+                },
+                {
+                    "name": "tableType",
+                    "label": "Table type",
+                    "type": "TABLE"
+                },
+                {
+                    "name": "credential",
+                    "label": "Credential type",
+                    "type": "CREDENTIAL"
+                },
+                {
+                    "name": "keyPress",
+                    "label": "Keypress type",
+                    "type": "KEYPRESS"
+                },
+                {
+                    "name": "dateTime",
+                    "label": "DateTime type",
+                    "type": "DATETIME"
+                },
+                {
+                    "name": "variableMap",
+                    "label": "VariableMap type",
+                    "type": "VARIABLEMAP"
+                },
+                {
+                    "name": "coordinate",
+                    "label": "Coordinate type",
+                    "type": "COORDINATE"
+                },
+                {
+                    "name": "image",
+                    "label": "Image type",
+                    "type": "IMAGE"
+                },
+                {
+                    "name": "region",
+                    "label": "Region type",
+                    "type": "REGION"
+                },
+                {
+                    "name": "properties",
+                    "label": "Properties type",
+                    "type": "PROPERTIES"
+                },
+                {
+                    "name": "uiObject",
+                    "label": "UIObject type",
+                    "type": "UIOBJECT"
+                },
+                {
+                    "name": "record",
+                    "label": "Record type",
+                    "type": "RECORD"
+                },
+                {
+                    "name": "help",
+                    "label": "Help type",
+                    "description": "Help description",
+                    "type": "HELP"
+                }
+            ]
+        }
+    ],
+    "conditionals": [
+        {
+            "name": "conditionalTypeDemo",
+            "label": "False condition demo",
+            "description": "Checks the boolean variable is false.",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.conditional.ConditionalTypeDemoCondition",
+            "attributes": [
+                {
+                    "name": "variable",
+                    "label": "Boolean variable",
+                    "type": "BOOLEAN",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        },
+                        {
+                            "name": "VARIABLE_TYPE",
+                            "value": "BOOLEAN"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "iterators": [
+        {
+            "name": "iteratorTypeDemo",
+            "label": "Iterator demo",
+            "description": "Iterate number of times",
+            "nodeLabel": ": {{times}} times",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.iterator.IteratorTypeDemoIterator",
+            "returnType": "NUMBER",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "Return the value in variable",
+            "returnRequired": false,
+            "attributes": [
+                {
+                    "name": "times",
+                    "label": "times",
+                    "type": "NUMBER",
+                    "defaultValue": {
+                        "number": "10",
+                        "type": "NUMBER"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        },
+                        {
+                            "name": "GREATER_THAN_EQUALS",
+                            "value": "0"
+                        },
+                        {
+                            "name": "NUMBER_INTEGER"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "variables": [
+        {
+            "name": "variableTypeDemo",
+            "description": "Returns '1' as a String",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.variable.VariableTypeDemoVariable",
+            "type": "STRING",
+            "returns": [
+                {
+                    "type": "UNDEFINED",
+                    "subtype": "ANY"
+                }
+            ]
+        }
+    ],
+    "triggers": [
+        {
+            "name": "jdbcQueryTrigger",
+            "label": "JDBC Query Trigger",
+            "description": "JDBC Query Trigger",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.trigger.DBStatusTrigger",
+            "icon": "jdbc.svg",
+            "returnType": "RECORD",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": false,
+            "returnDescription": "Available keys: triggerType",
+            "returnName": "TriggerData",
+            "attributes": [
+                {
+                    "name": "driverClassName",
+                    "label": "Please provide the database driver class",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "jdbcUrl",
+                    "label": "Please provide the Jdbc connection string",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "userName",
+                    "label": "Please provide the user Name",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "password",
+                    "label": "Please provide the password",
+                    "type": "CREDENTIAL",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "sqlQuery",
+                    "label": "Please provide the SQL to check the records",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "interval",
+                    "label": "Please provide the interval to query in seconds",
+                    "type": "NUMBER",
+                    "defaultValue": {
+                        "number": "300",
+                        "type": "NUMBER"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        },
+                        {
+                            "name": "GREATER_THAN",
+                            "value": "0"
+                        },
+                        {
+                            "name": "NUMBER_INTEGER"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "jmsTrigger",
+            "label": "JMS Trigger",
+            "description": "JMS Trigger",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.trigger.JMSQueueTrigger",
+            "icon": "jms.svg",
+            "returnType": "RECORD",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": false,
+            "returnDescription": "Available keys: triggerType",
+            "returnName": "TriggerData",
+            "attributes": [
+                {
+                    "name": "brokerURL",
+                    "label": "Please provide the broker URL",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                },
+                {
+                    "name": "queueName",
+                    "label": "Please provide the queue name",
+                    "type": "TEXT",
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "demoTrigger",
+            "label": "Demo Trigger",
+            "description": "Demo Trigger",
+            "minimumControlRoomVersion": "8750",
+            "minimumBotAgentVersion": "20.11",
+            "mainClass": "com.automationanywhere.botcommand.samples.trigger.TriggerDemoTrigger",
+            "icon": "email.svg",
+            "returnType": "RECORD",
+            "returnSubtype": "UNDEFINED",
+            "returnLabel": "",
+            "returnRequired": false,
+            "returnDescription": "Available keys: triggerType",
+            "returnName": "TriggerData",
+            "attributes": [
+                {
+                    "name": "interval",
+                    "label": "Please provide the interval to trigger in seconds",
+                    "type": "NUMBER",
+                    "defaultValue": {
+                        "number": "120",
+                        "type": "NUMBER"
+                    },
+                    "rules": [
+                        {
+                            "name": "NOT_EMPTY"
+                        },
+                        {
+                            "name": "GREATER_THAN",
+                            "value": "0"
+                        },
+                        {
+                            "name": "NUMBER_INTEGER"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
